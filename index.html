@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Tech.Care</title>
+
+  <!-- Bootstrap link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Font style link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Css link  -->
+  <link rel="stylesheet" href="./CSS/style.css">
+
+</head>
+
+<body>
+  <!-- nav bar Section -->
+  <nav class="navbar bg-white shadow-sm px-4 rounded-pill">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets\icons\TestLogo.svg" alt="Tech.Care Logo" height="32">
+        <!-- <span class="fw-semibold fs-5">Tech<span class="text-success fs-1">.</span>Care</span> -->
+      </div>
+
+      <ul class="nav nav-pills gap-2">
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="#">
+            <img src="assets\icons\home_FILL0_wght300_GRAD0_opsz24.svg" class="nav-icon" alt="">
+            Overview
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">
+            <img src="assets\icons\group_FILL0_wght300_GRAD0_opsz24.svg" class="nav-icon" alt="">
+            Patients
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="#">
+            <img src="assets\icons\calendar_today_FILL0_wght300_GRAD0_opsz24.svg" class="nav-icon" alt="">
+            Schedule
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="#">
+            <img src="assets\icons\chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" class="nav-icon" alt="">
+            Message
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="#">
+            <img src="assets\icons\credit_card_FILL0_wght300_GRAD0_opsz24.svg" class="nav-icon" alt="">
+            Transactions
+          </a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets\images\senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+          alt="Doctor" class="rounded-circle" width="36" height="36">
+        <div class="text-start small">
+          <div class="fw-semibold">Dr. Jose Simmons</div>
+          <div class="text-muted">General Practitioner</div>
+        </div>
+        <img src="assets\icons\settings_FILL0_wght300_GRAD0_opsz24.svg" alt="Settings" class="nav-icon">
+        <img src="assets\icons\more_vert_FILL0_wght300_GRAD0_opsz24.svg" alt="more">
+      </div>
+
+    </div>
+  </nav>
+  <!-- nav bar section ends here  -->
+
+  <div class="layout">
+
+    <!-- side bar section starts from here  -->
+    <aside class="patients-card">
+      <div class="patients-header">
+        <h2>Patients</h2>
+        <img src="assets\icons\search_FILL0_wght300_GRAD0_opsz24.svg" alt="Search_icon">
+      </div>
+
+      <ul id="patientsList" class="patients-list">
+        <!-- Patients will be injected here -->
+      </ul>
+    </aside>
+    <!-- side bar section ends here  -->
+    <!-- main section start here  -->
+
+    <main>
+      <div class="diagnosis-card">
+        <h2>Diagnosis History</h2>
+
+        <div class="chart-section">
+          <div class="chart-left">
+            <h3>Blood Pressure <span>Last 6 months</span></h3>
+            <canvas id="bpChart"></canvas>
+          </div>
+
+          <div class="chart-right">
+            <div class="metric">
+              <span class="dot pink"></span>
+              <div>
+                <strong>Systolic</strong>
+                <h1>160</h1>
+                <small>Higher than Average</small>
+              </div>
+            </div>
+
+            <div class="metric">
+              <span class="dot purple"></span>
+              <div>
+                <strong>Diastolic</strong>
+                <h1>78</h1>
+                <small>Lower than Average</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat blue">
+            <img src="assets\icons\respiratory rate.svg" alt="">
+            <p>Respiratory Rate</p>
+            <h2>20 bpm</h2>
+            <small>Normal</small>
+          </div>
+
+          <div class="stat peach">
+            <img src="assets\icons\temperature.svg" alt="">
+            <p>Temperature</p>
+            <h2>98.6°F</h2>
+            <small>Normal</small>
+          </div>
+
+          <div class="stat pink">
+            <img src="assets\icons\HeartBPM.svg" alt="">
+            <p>Heart Rate</p>
+            <h2>78 bpm</h2>
+            <small>Lower than Average</small>
+          </div>
+        </div>
+      </div>
+
+      <section class="diagnostic-card">
+
+        <h2 class="card-title">Diagnostic List</h2>
+
+        <div class="diagnostic-table">
+
+          <!-- Header -->
+          <div class="diagnostic-row header">
+            <div>Problem/Diagnosis</div>
+            <div>Description</div>
+            <div>Status</div>
+          </div>
+
+          <!-- Rows -->
+          <div class="diagnostic-row">
+            <div>Hypertension</div>
+            <div>Chronic high blood pressure</div>
+            <div class="status muted">Under Observation</div>
+          </div>
+
+          <div class="diagnostic-row">
+            <div>Type 2 Diabetes</div>
+            <div>Insulin resistance and elevated blood sugar</div>
+            <div class="status success">Cured</div>
+          </div>
+
+          <div class="diagnostic-row">
+            <div>Asthma</div>
+            <div>Recurrent episodes of bronchial constriction</div>
+            <div class="status muted">Inactive</div>
+          </div>
+
+          
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- main section ends here  -->
+
+    <!-- Right Sidebar -->
+    <aside>
+      <div class="profile-card">
+
+        <div class="profile-header">
+          <img class="avatar" src="assets\images\Layer 2@2x.png" alt="Patient Profile Image">
+          <h2 class="name">Jessica Taylor</h2>
+        </div>
+
+        <ul class="profile-info">
+
+          <li class="info-item">
+            <div class="icon">
+              <img src="assets\icons\BirthIcon.svg" alt="">
+            </div>
+            <div>
+              <span class="label">Date Of Birth</span>
+              <span class="value">August 23, 1996</span>
+            </div>
+          </li>
+
+          <li class="info-item">
+            <div class="icon">
+              <img src="assets\icons\FemaleIcon.svg" alt="">
+            </div>
+            <div>
+              <span class="label">Gender</span>
+              <span class="value">Female</span>
+            </div>
+          </li>
+
+          <li class="info-item">
+            <div class="icon">
+              <img src="assets\icons\PhoneIcon.svg" alt="">
+            </div>
+            <div>
+              <span class="label">Contact Info</span>
+              <span class="value">(415) 555-1234</span>
+            </div>
+          </li>
+
+          <li class="info-item">
+            <div class="icon">
+              <img src="assets\icons\PhoneIcon.svg" alt="">
+            </div>
+            <div>
+              <span class="label">Emergency Contacts</span>
+              <span class="value">(415) 555-5678</span>
+            </div>
+          </li>
+
+          <li class="info-item">
+            <div class="icon">
+              <img src="assets\icons\InsuranceIcon.svg" alt="">
+            </div>
+            <div>
+              <span class="label">Insurance Provider</span>
+              <span class="value">Sunrise Health Assurance</span>
+            </div>
+          </li>
+
+        </ul>
+
+        <button class="info-btn">Show All Information</button>
+
+      </div>
+      <section class="lab-results-card">
+
+        <h3 class="lab-title">Lab Results</h3>
+
+        <ul class="lab-list">
+
+          <li class="lab-item">
+            <span class="lab-name">Blood Tests</span>
+            <span class="lab-icon">
+              <img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" alt="download icon">
+            </span>
+          </li>
+
+          <li class="lab-item active">
+            <span class="lab-name">CT Scans</span>
+            <span class="lab-icon">
+              <img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" alt="download icon">
+            </span>
+          </li>
+
+          <li class="lab-item">
+            <span class="lab-name">Radiology Reports</span>
+            <span class="lab-icon">
+              <img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" alt="download icon">
+            </span>
+          </li>
+
+          <li class="lab-item">
+            <span class="lab-name">X-Rays</span>
+            <span class="lab-icon">
+              <img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" alt="download icon">
+            </span>
+          </li>
+
+          <li class="lab-item">
+            <span class="lab-name">Urine Test</span>
+            <span class="lab-icon">
+              <img src="assets/icons/download_FILL0_wght300_GRAD0_opsz24 (1).svg" alt="download icon">
+            </span>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </aside>
+
+
+    <!-- right sidebar ends here  -->
+  </div>
+
+  <!-- chart.js liink  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap js script  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- main js script  -->
+  <script src="./js/main.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/chart.js"></script>
+</body>
+
+</html>

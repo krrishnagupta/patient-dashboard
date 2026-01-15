@@ -1,0 +1,444 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #F6F7F8;
+}
+
+.navbar {
+  height: 72px;
+}
+
+.nav-pills .nav-link {
+  border-radius: 999px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #00bfa676;
+  font-weight: 500;
+  color: black;
+}
+
+.nav-link:hover{
+  background-color: #00bfa676;
+  font-weight: 500;
+  color: black;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+/* navbar style ends here  */
+
+.layout {
+  display: flex;
+}
+
+/* sidebar style start from here  */
+
+.patients-card {
+  top: 122px;
+  left: 18px;
+  width: 367px;
+  height: 1054px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  opacity: 1;
+  padding: 16px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+/* Header */
+.patients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.patients-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.patients-header input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* List */
+.patients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Item */
+.patient-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.patient-item:hover {
+  background: #f2f7f6;
+}
+
+.patient-item.active {
+  background: #e6f7f5;
+}
+
+/* Avatar */
+.patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+/* Info */
+.patient-info {
+  flex: 1;
+}
+
+.patient-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.patient-meta {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Left side bar is end  */
+
+/* main content start  */
+
+main{
+  margin: 5px;
+}
+
+.diagnosis-card {
+  top: 122px;
+  left: 417px;
+  width: 766px;
+  height: 673px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  opacity: 1;
+  padding: 20px;
+}
+
+.chart-section {
+  display: flex;
+  gap: 20px;
+}
+
+.chart-left {
+  flex: 3;
+}
+
+#bpChart {
+  width: 100%;
+  height: 260px;
+}
+
+
+.chart-left h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.chart-left span {
+  font-size: 12px;
+  color: #888;
+}
+
+.chart-right {
+  flex: 1;
+}
+
+.metric {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.metric h1 {
+  margin: 4px 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.pink {
+  background: #f472b6;
+}
+
+.purple {
+  background: #8b5cf6;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.stat {
+  flex: 1;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.blue {
+  background: #e6f7f6;
+}
+
+.peach {
+  background: #fdecec;
+}
+
+.pink {
+  background:#FFE6F1;
+}
+
+.stat h2 {
+  margin: 8px 0;
+}
+
+/* main section ends here  */
+/* right side bar start from here  */
+
+.profile-card {
+  width: 367px;
+  height: 677px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+/* Header */
+.profile-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee; /* fallback if img not loaded */
+  margin-bottom: 12px;
+}
+
+.name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Info list */
+.profile-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.icon {
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Button */
+.info-btn {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #1eeadf;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* right side bar end here  */
+
+/* bottom section starts here  */
+
+.diagnostic-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.card-title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Table wrapper */
+.diagnostic-table {
+  max-height: 260px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+/* Row base */
+.diagnostic-row {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1fr;
+  padding: 14px 16px;
+  font-size: 14px;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* Header */
+.diagnostic-row.header {
+  background: #f6f7f9;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  border-bottom: none;
+}
+
+/* Status styles */
+.status {
+  font-weight: 600;
+}
+
+.status.muted {
+  color: #6b7280;
+}
+
+.status.success {
+  color: #16a34a;
+}
+
+.diagnostic-table::-webkit-scrollbar {
+  width: 6px;
+}
+
+.diagnostic-table::-webkit-scrollbar-thumb {
+  background: #cfd4da;
+  border-radius: 6px;
+}
+
+/* lab result card starts here  */
+
+.lab-results-card {
+  width: 367px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 80px;
+  height: 280px;
+}
+
+/* Title */
+.lab-title {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* List */
+.lab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Item */
+.lab-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lab-item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.lab-item:hover {
+  background: #f6f7f9;
+}
+
+/* Active */
+.lab-item.active {
+  background: #f1f3f5;
+}
+
+/* Icon placeholder */
+.lab-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Scrollbar (optional) */
+.lab-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lab-list::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 6px;
+}
